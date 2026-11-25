@@ -134,6 +134,7 @@
         <visual name='visual'>
           <geometry><box><size>0.3 0.4 0.25</size></box></geometry>
           <material>
+            <!-- tono 100 % del cartón base -->
             <ambient>0.53 0.39 0.28 1</ambient>
             <diffuse>0.65 0.48 0.35 1</diffuse>
           </material>
@@ -159,8 +160,9 @@
         <visual name='visual'>
           <geometry><box><size>0.3 0.3 0.3</size></box></geometry>
           <material>
-            <ambient>0.53 0.39 0.28 1</ambient>
-            <diffuse>0.65 0.48 0.35 1</diffuse>
+            <!-- tono 80 % del cartón base -->
+            <ambient>0.424 0.312 0.224 1</ambient>
+            <diffuse>0.52 0.384 0.28 1</diffuse>
           </material>
         </visual>
       </link>
@@ -184,8 +186,9 @@
         <visual name='visual'>
           <geometry><box><size>0.3 0.3 0.3</size></box></geometry>
           <material>
-            <ambient>0.53 0.39 0.28 1</ambient>
-            <diffuse>0.65 0.48 0.35 1</diffuse>
+            <!-- tono 95 % del cartón base -->
+            <ambient>0.503 0.37 0.266 1</ambient>
+            <diffuse>0.617 0.456 0.332 1</diffuse>
           </material>
         </visual>
       </link>
@@ -211,8 +214,9 @@
         <visual name='visual'>
           <geometry><box><size>0.3 0.3 0.3</size></box></geometry>
           <material>
-            <ambient>0.53 0.39 0.28 1</ambient>
-            <diffuse>0.65 0.48 0.35 1</diffuse>
+            <!-- tono 82 % del cartón base -->
+            <ambient>0.435 0.32 0.23 1</ambient>
+            <diffuse>0.533 0.394 0.287 1</diffuse>
           </material>
         </visual>
       </link>
@@ -236,6 +240,7 @@
         <visual name='visual'>
           <geometry><box><size>0.3 0.3 0.3</size></box></geometry>
           <material>
+            <!-- tono 100 % del cartón base -->
             <ambient>0.53 0.39 0.28 1</ambient>
             <diffuse>0.65 0.48 0.35 1</diffuse>
           </material>
@@ -261,19 +266,23 @@
         <visual name='visual'>
           <geometry><box><size>0.3 0.4 0.25</size></box></geometry>
           <material>
-            <ambient>0.53 0.39 0.28 1</ambient>
-            <diffuse>0.65 0.48 0.35 1</diffuse>
+            <!-- tono 75 % del cartón base -->
+            <ambient>0.398 0.292 0.21 1</ambient>
+            <diffuse>0.488 0.36 0.262 1</diffuse>
           </material>
         </visual>
       </link>
       <static>false</static>
     </model>
 
-    <!-- Luz solar -->
+    <!-- Luz solar. Llega desde atrás del robot (hacia +X) para iluminar las
+         caras de las cajas que ve la cámara. Antes era -0.5 0.1 -0.9: las
+         cajas quedaban a contraluz, todas las caras se veían iguales y el
+         detector no podía separar cajas pegadas. -->
     <light name='sun' type='directional'>
       <pose>0 0 10 0 0 0</pose>
       <cast_shadows>true</cast_shadows>
-      <direction>-0.5 0.1 -0.9</direction>
+      <direction>0.5 0.3 -0.8</direction>
     </light>
   </world>
 </sdf>
